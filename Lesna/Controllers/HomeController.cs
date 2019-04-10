@@ -26,5 +26,12 @@ namespace Lesna.Controllers
 
             return View();
         }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public ActionResult WyslijEmail(string email, string telefon, string tresc)
+        {
+            return Json(new { Wynik = "OK" });
+        }
     }
 }
