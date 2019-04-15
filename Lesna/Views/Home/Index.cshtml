@@ -13,7 +13,7 @@
     <link href="~/Content/all.min.css" rel="stylesheet" />
     <link href="~/Content/all.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -21,6 +21,8 @@
     <link href="~/Content/magnific-popup.css" rel="stylesheet" />
     <!-- Theme CSS - Includes Bootstrap -->
     <link href="~/Content/creative.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+
 </head>
 <body id="page-top">
     <!-- Navigation -->
@@ -496,6 +498,8 @@
     <script src="~/Scripts/jquery.magnific-popup.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="~/Scripts/creative.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+
 
     <!-- Modal -->
     <div class="modal fade container-fluid" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -510,11 +514,11 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="email" class="col-form-label">Podaj swój adres e-mail:</label>
-                        <input type="text" class="form-control" id="email" placeholder="e-mail...">
+                        <input type="email" class="form-control" id="email" placeholder="e-mail...">
                     </div>
                     <div class="form-group">
                         <label for="telefon" class="col-form-label">Telefon:</label>
-                        <input type="text" class="form-control" id="telefon" placeholder="telefon...">
+                        <input type="tel" class="form-control" id="telefon" placeholder="telefon...">
                     </div>
                     <div class="form-group">
                         <label for="tresc" class="col-form-label">Wiadomość:</label>
@@ -529,10 +533,34 @@
             </div>
         </div>
     </div>
+
+
+
+
 </body>
 </html>
 <script>
 
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#eaf7f7",
+                    "text": "#5c7291"
+                },
+                "button": {
+                    "background": "#56cbdb",
+                    "text": "#ffffff"
+                }
+            },
+            "content": {
+                "message": "Ta strona korzysta z plików cookies. Pozostanie na stronie oznacza, ze zgadzasz się na ich użycie.",
+                "dismiss": "Zrozumiałem!",
+                "link": "Pliki cookies",
+                "href": "https://pl.wikipedia.org/wiki/HTTP_cookie"
+            }
+        })
+    });
 
     function wyslij_email() {
       
@@ -553,7 +581,7 @@
                 data: { "email": email, "telefon": telefon, "tresc": tresc },
                 success: function (data, textStatus, jqXHR) {
                     if (data.Wynik != "") {
-                        alert('Twoja wiadomość ostała wysłana, wkrótce się z Tobą skontaktujemy!');
+                        alert('Twoja wiadomość została wysłana, wkrótce się z Tobą skontaktujemy!');
                         location.reload();
                     } else {
                         alert("Błąd wysyłania wiadomości!");
