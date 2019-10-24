@@ -146,6 +146,8 @@
     <Content Include="Content\creative.css" />
     <Content Include="Content\creative.min.css" />
     <Content Include="Content\magnific-popup.css" />
+    <Content Include="Content\video.popup.css" />
+    <Content Include="Scripts\video.popup.js" />
     <Content Include="EmailTemplate\dolesnej.html" />
     <Content Include="EmailTemplate\doklienta.html" />
     <Content Include="favicon.ico" />
