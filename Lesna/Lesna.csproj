@@ -153,6 +153,7 @@
     <Content Include="img\kielbasa.jpg" />
     <Content Include="img\kopalniazlota_logo.png" />
     <Content Include="img\osadagornicza.png" />
+    <Content Include="img\palac.jpg" />
     <Content Include="img\pierogi.jpg" />
     <Content Include="img\portfolio\fullsize\10.JPG" />
     <Content Include="img\portfolio\fullsize\11.JPG" />
@@ -184,6 +185,11 @@
     <Content Include="img\portfolio\thumbnails\7.JPG" />
     <Content Include="img\portfolio\thumbnails\8.JPG" />
     <Content Include="img\portfolio\thumbnails\9.JPG" />
+    <Content Include="img\Projekt\EU.png" />
+    <Content Include="img\Projekt\leader.png" />
+    <Content Include="img\Projekt\logo_ds.png" />
+    <Content Include="img\Projekt\prow.png" />
+    <Content Include="img\Projekt\qwsi.jpg" />
     <Content Include="img\pstrag1.jpg" />
     <Content Include="img\pstrag2.jpg" />
     <Content Include="img\pstrag3.jpg" />
@@ -191,6 +197,7 @@
     <Content Include="img\rancho.jpg" />
     <Content Include="img\rower.png" />
     <Content Include="img\skalisko.png" />
+    <Content Include="img\skiraft_logo.png" />
     <Content Include="img\sztolnia.jpg" />
     <Content Include="img\zupa.jpg" />
     <Content Include="img\zupa_.jpg" />
